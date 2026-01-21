@@ -12,7 +12,6 @@ import com.squareup.wire.ProtoReader
 import com.squareup.wire.ProtoWriter
 import com.squareup.wire.ReverseProtoWriter
 import com.squareup.wire.Syntax.PROTO_3
-import com.squareup.wire.`internal`.JvmField
 import kotlin.Any
 import kotlin.AssertionError
 import kotlin.Boolean
@@ -48,7 +47,6 @@ public class Field(
   public fun copy(unknownFields: ByteString = this.unknownFields): Field = Field(unknownFields)
 
   public companion object {
-    @JvmField
     public val ADAPTER: ProtoAdapter<Field> = object : ProtoAdapter<Field>(
       FieldEncoding.LENGTH_DELIMITED, 
       Field::class, 

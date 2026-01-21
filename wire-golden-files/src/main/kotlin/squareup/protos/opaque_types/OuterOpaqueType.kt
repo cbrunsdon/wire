@@ -15,7 +15,6 @@ import com.squareup.wire.ProtoWriter
 import com.squareup.wire.ReverseProtoWriter
 import com.squareup.wire.Syntax.PROTO_2
 import com.squareup.wire.WireField
-import com.squareup.wire.`internal`.JvmField
 import com.squareup.wire.`internal`.sanitize
 import kotlin.Any
 import kotlin.AssertionError
@@ -84,7 +83,6 @@ public class OuterOpaqueType(
   ): OuterOpaqueType = OuterOpaqueType(inner_opaque_type_1, inner_opaque_type_2, unknownFields)
 
   public companion object {
-    @JvmField
     public val ADAPTER: ProtoAdapter<OuterOpaqueType> = object : ProtoAdapter<OuterOpaqueType>(
       FieldEncoding.LENGTH_DELIMITED, 
       OuterOpaqueType::class, 
@@ -181,7 +179,6 @@ public class OuterOpaqueType(
     public fun copy(value_: String? = this.value_, unknownFields: ByteString = this.unknownFields): InnerOpaqueType1 = InnerOpaqueType1(value_, unknownFields)
 
     public companion object {
-      @JvmField
       public val ADAPTER: ProtoAdapter<InnerOpaqueType1> = object : ProtoAdapter<InnerOpaqueType1>(
         FieldEncoding.LENGTH_DELIMITED, 
         InnerOpaqueType1::class, 
@@ -272,7 +269,6 @@ public class OuterOpaqueType(
     public fun copy(value_: String? = this.value_, unknownFields: ByteString = this.unknownFields): InnerOpaqueType2 = InnerOpaqueType2(value_, unknownFields)
 
     public companion object {
-      @JvmField
       public val ADAPTER: ProtoAdapter<InnerOpaqueType2> = object : ProtoAdapter<InnerOpaqueType2>(
         FieldEncoding.LENGTH_DELIMITED, 
         InnerOpaqueType2::class, 

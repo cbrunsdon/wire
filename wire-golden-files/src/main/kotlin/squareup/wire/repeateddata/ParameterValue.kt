@@ -15,7 +15,6 @@ import com.squareup.wire.ProtoWriter
 import com.squareup.wire.ReverseProtoWriter
 import com.squareup.wire.Syntax.PROTO_2
 import com.squareup.wire.WireField
-import com.squareup.wire.`internal`.JvmField
 import com.squareup.wire.`internal`.immutableCopyOf
 import kotlin.Any
 import kotlin.AssertionError
@@ -77,7 +76,6 @@ public class ParameterValue(
   public fun copy(data_: List<Float> = this.data_, unknownFields: ByteString = this.unknownFields): ParameterValue = ParameterValue(data_, unknownFields)
 
   public companion object {
-    @JvmField
     public val ADAPTER: ProtoAdapter<ParameterValue> = object : ProtoAdapter<ParameterValue>(
       FieldEncoding.LENGTH_DELIMITED, 
       ParameterValue::class, 

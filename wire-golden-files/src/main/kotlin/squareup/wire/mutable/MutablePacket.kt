@@ -15,7 +15,6 @@ import com.squareup.wire.ProtoWriter
 import com.squareup.wire.ReverseProtoWriter
 import com.squareup.wire.Syntax.PROTO_2
 import com.squareup.wire.WireField
-import com.squareup.wire.`internal`.JvmField
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -77,7 +76,6 @@ public class MutablePacket(
   }
 
   public companion object {
-    @JvmField
     public val ADAPTER: ProtoAdapter<MutablePacket> = object : ProtoAdapter<MutablePacket>(
       FieldEncoding.LENGTH_DELIMITED, 
       MutablePacket::class, 

@@ -15,7 +15,6 @@ import com.squareup.wire.ProtoWriter
 import com.squareup.wire.ReverseProtoWriter
 import com.squareup.wire.Syntax.PROTO_2
 import com.squareup.wire.WireField
-import com.squareup.wire.`internal`.JvmField
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -65,7 +64,6 @@ public class MutableHeader(
   }
 
   public companion object {
-    @JvmField
     public val ADAPTER: ProtoAdapter<MutableHeader> = object : ProtoAdapter<MutableHeader>(
       FieldEncoding.LENGTH_DELIMITED, 
       MutableHeader::class, 

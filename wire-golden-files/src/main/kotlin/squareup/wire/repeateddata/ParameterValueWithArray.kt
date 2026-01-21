@@ -16,7 +16,6 @@ import com.squareup.wire.ReverseProtoWriter
 import com.squareup.wire.Syntax.PROTO_2
 import com.squareup.wire.WireField
 import com.squareup.wire.`internal`.FloatArrayList
-import com.squareup.wire.`internal`.JvmField
 import com.squareup.wire.`internal`.decodePrimitive_float
 import com.squareup.wire.`internal`.encodeArray_float
 import kotlin.Any
@@ -76,7 +75,6 @@ public class ParameterValueWithArray(
   public fun copy(data_: FloatArray = this.data_, unknownFields: ByteString = this.unknownFields): ParameterValueWithArray = ParameterValueWithArray(data_, unknownFields)
 
   public companion object {
-    @JvmField
     public val ADAPTER: ProtoAdapter<ParameterValueWithArray> =
         object : ProtoAdapter<ParameterValueWithArray>(
       FieldEncoding.LENGTH_DELIMITED, 

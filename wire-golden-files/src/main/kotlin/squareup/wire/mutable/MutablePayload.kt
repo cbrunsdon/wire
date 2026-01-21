@@ -17,7 +17,6 @@ import com.squareup.wire.ReverseProtoWriter
 import com.squareup.wire.Syntax.PROTO_2
 import com.squareup.wire.WireEnum
 import com.squareup.wire.WireField
-import com.squareup.wire.`internal`.JvmField
 import com.squareup.wire.`internal`.JvmStatic
 import com.squareup.wire.`internal`.sanitize
 import kotlin.Any
@@ -98,7 +97,6 @@ public class MutablePayload(
   }
 
   public companion object {
-    @JvmField
     public val ADAPTER: ProtoAdapter<MutablePayload> = object : ProtoAdapter<MutablePayload>(
       FieldEncoding.LENGTH_DELIMITED, 
       MutablePayload::class, 
@@ -176,7 +174,6 @@ public class MutablePayload(
     ;
 
     public companion object {
-      @JvmField
       public val ADAPTER: ProtoAdapter<Type> = object : EnumAdapter<Type>(
         Type::class, 
         PROTO_2, 
