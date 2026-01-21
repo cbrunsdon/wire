@@ -1493,7 +1493,7 @@ class KotlinGenerator private constructor(
             if (field.type!!.isScalar && field.type != ProtoType.BYTES) {
               addModifiers(CONST)
             } else {
-              jvmField()
+              jvmFieldIf(true)
             }
           }
           .initializer(fieldValue)
